@@ -12,8 +12,6 @@ spring:
     alibaba:
       seata:
         tx-service-group: my_test_tx_group # 定义事务组的名称
-  main:
-    allow-bean-definition-overriding: true
 
 seata:
   enabled: true

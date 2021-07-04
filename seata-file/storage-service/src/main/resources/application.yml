@@ -11,7 +11,7 @@ spring:
   cloud:
     alibaba:
       seata:
-        tx-service-group: test_tx_group # 定义事务组的名称
+        tx-service-group: test_tx_group # 定义事务组的名称，与 vgroupMapping.test_tx_group对应
 eureka:
   client:
     service-url:

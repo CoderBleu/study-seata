@@ -1,4 +1,4 @@
-. {
+registry {
   # file 、nacos 、eureka、redis、zk、consul、etcd3、sofa
   type = "nacos"
 
@@ -15,7 +15,7 @@ config {
 
   nacos {
     serverAddr = "127.0.0.1:8848"
-       namespace = "" # TODO seata-test
+       namespace = "" # 命名空间，不填就是默认的
        group = "SEATA_GROUP"
        username = "nacos"
        password = "nacos"

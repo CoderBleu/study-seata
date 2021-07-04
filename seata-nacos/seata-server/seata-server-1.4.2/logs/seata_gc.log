@@ -1,6 +1,2 @@
-[0.094s][info][gc] Using G1
-[0.128s][info][gc] Periodic GC disabled
-[75592.541s][info][gc] GC(0) Pause Young (Normal) (G1 Evacuation Pause) 1024M->14M(2048M) 9009.373ms
-[75609.251s][info][gc] GC(1) Pause Young (Normal) (G1 Evacuation Pause) 1023M->14M(2048M) 11.497ms
-[75615.668s][info][gc] GC(2) Pause Young (Normal) (G1 Evacuation Pause) 1024M->14M(2048M) 10.466ms
-[84449.021s][info][gc] GC(3) Pause Young (Normal) (G1 Evacuation Pause) 1024M->14M(2048M) 128.098ms
+[0.090s][info][gc] Using G1
+[0.119s][info][gc] Periodic GC disabled

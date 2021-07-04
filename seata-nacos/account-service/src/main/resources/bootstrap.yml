@@ -13,13 +13,6 @@ spring:
       seata:
         enabled: true
         tx-service-group: my_test_tx_group #${parent.artifactId}-group
-#        application-id: ${spring.application.name}
-#        enable-auto-data-source-proxy: true
-#        tx-service-group: DEFAULT_GROUP # 定义事务组的名称
-#    nacos:
-#      discovery:
-##        namespace: seata-test # 命名空间id
-#        group: DEFAULT_GROUP
 
 seata:
   enabled: true
@@ -28,21 +21,21 @@ seata:
       type: nacos
       nacos:
         server-addr: 127.0.0.1:8848
-        group: "DEFAULT_GROUP"
-        namespace: "public" # TODO seata_test
+        group: "DEFAULT_GROUP" # 默认DEFAULT_GROUP
+        namespace: "public" # 默认public
         username: "nacos"
         password: "nacos"
         cluster: default
-        data-id: "seata-registry-default.conf"
+        data-id: "seata-registry-default.conf" # 对应为dataid且在public的命名空间的配置文件
     config:
       type: nacos
       nacos:
-        namespace: "public" # TODO seata_test
+        namespace: "public" # 默认public
         server-addr: 127.0.0.1:8848
-        group: DEFAULT_GROUP
+        group: DEFAULT_GROUP # 默认DEFAULT_GROUP
         username: "nacos"
         password: "nacos"
-        dataId: "seata-config-default.conf"
+        dataId: "seata-config-default.conf" # 对应为dataid且在public的命名空间的配置文件
 
 
 mybatis-plus:
@@ -55,52 +48,3 @@ logging:
   level:
     org.springframework.cloud.alibaba.seata.web: debug
     cn.itcast: debug
-
-#seata:
-#  enabled: true
-#  service:
-#    vgroupMapping:
-#      DEFAULT_GROUP: seata-server # seata-server
-#    seata-server:
-#      grouplist: 127.0.0.1:8091
-#    enable-degrade: false
-#    disable-global-transaction: false
-#  transport:
-#    shutdown:
-#      wait: 3
-#    thread-factory:
-#      boss-thread-prefix: NettyBoss
-#      worker-thread-prefix: NettyServerNIOWorker
-#      server-executor-thread-prefix: NettyServerBizHandler
-#      share-boss-worker: false
-#      client-selector-thread-prefix: NettyClientSelector
-#      client-selector-thread-size: 1
-#      client-worker-thread-prefix: NettyClientWorkerThread
-#      worker-thread-size: default
-#      boss-thread-size: 1
-#    type: TCP
-#    server: NIO
-#    heartbeat: true
-#    serialization: seata
-#    compressor: none
-#    enable-client-batch-send-request: true
-#  config:
-#    type: nacos
-#    nacos:
-#      namespace: "" # TODO seata_test
-#      server-addr: 127.0.0.1:8848
-#      group: DEFAULT_GROUP
-#      username: "nacos"
-#      password: "nacos"
-#  registry:
-#    type: file
-#    load-balance: RandomLoadBalance
-#    load-balance-virtual-nodes: 10
-#    nacos:
-#      server-addr: 127.0.0.1:8848
-#      group : "DEFAULT_GROUP"
-#      namespace: "" # TODO seata_test
-#      username: "nacos"
-#      password: "nacos"
-#  log:
-#    exception-rate: 100
